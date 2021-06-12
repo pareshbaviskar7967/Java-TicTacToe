@@ -23,12 +23,25 @@ public class TicTacToeGame {
 		if (playerLetter.equals("X")) {
 			computerLetter = "O";
 			System.out.println("Computer letter is : " + computerLetter);
+			System.out.println("User letter is : " + playerLetter);
 		} else if (playerLetter.equals("O")) {
 			computerLetter = "X";
 			System.out.println("Computer letter is : " + computerLetter);
+			System.out.println("User letter is : " + playerLetter);
 		} else {
 			System.out.println("Incorrect input");
 		}
+	}
+
+	// UC-3 Show the structure of board
+	public static void showBoard(char[] board) {
+		System.out.println("~~~~~~~~~~~~~~~");
+		System.out.println(" | " + board[1] + " | " + board[2] + " | " + board[3] + " | ");
+		System.out.println("~~~~~~~~~~~~~~~");
+		System.out.println(" | " + board[4] + " | " + board[5] + " | " + board[6] + " | ");
+		System.out.println("~~~~~~~~~~~~~~~");
+		System.out.println(" | " + board[7] + " | " + board[8] + " | " + board[9] + " | ");
+		System.out.println("~~~~~~~~~~~~~~~");
 	}
 
 	public static void main(String[] args) {
@@ -36,5 +49,6 @@ public class TicTacToeGame {
 		TicTacToeGame Tobj = new TicTacToeGame();
 		char[] board = createBoard();
 		Tobj.inputLetterOX();
+		showBoard(board);
 	}
 }
